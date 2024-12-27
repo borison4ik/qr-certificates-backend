@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Certificate</title>
+		<style type="text/css">
+			@page {
+				size: A5 landscape;
+				margin: 0;
+			}
+
+			.marck-script-regular {
+				font-family: 'Marck Script', cursive;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.roboto-light {
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 300;
+				font-style: normal;
+			}
+
+			.roboto-regular {
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+			.roboto-bold {
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 700;
+				font-style: normal;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				background: #eee;
+			}
+
+			body {
+				box-sizing: border-box;
+				height: 148mm;
+				width: 210mm;
+				background-image: url('http://localhost:4200/static/images/img/classic_bg.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				position: relative;
+			}
+
+			body h1,
+			h2,
+			h3 {
+			}
+			.wrapper {
+				padding-left: 9.5cm;
+				padding-top: 1.2cm;
+			}
+			.title {
+				font-size: 48px;
+				margin-bottom: 20px;
+				color: #eee;
+			}
+			.text {
+				font-size: 48px;
+				margin-bottom: 20px;
+				color: #eee;
+			}
+			.qr {
+				width: 196px;
+				height: 196px;
+				position: absolute;
+				left: 21px;
+				bottom: 21px;
+			}
+			.price {
+				font-size: 68px;
+				color: #ab2200;
+				padding-left: 16px;
+			}
+			.price span {
+				font-size: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="roboto-bold title">Подарочный<br />сертификат</h1>
+			<p class="roboto-light text">на имя:</p>
+			<p class="roboto-light text">${certificate.title}</p>
+			<h2 class="roboto-bold price">${certificate.price}<span>₽</span></h2>
+		</div>
+
+		<img
+			class="qr"
+			src="../../../public/qr/clufk3fwt0000ybkz7p9vlkh3.png"
+			alt=""
+		/>
+	</body>
+</html>
